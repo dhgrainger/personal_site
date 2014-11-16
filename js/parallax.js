@@ -6,23 +6,28 @@ window.requestAnimationFrame = window.requestAnimationFrame
  || window.msRequestAnimationFrame
  || function(f){setTimeout(f, 1000/60)}
 
-var navy = document.getElementById('navy')
 var image = document.getElementById('image')
-
+var title = document.getElementById('title')
+var nav = document.getElementById('nav')
 
 var scrollheight = document.body.scrollHeight // height of entire document
 var windowheight = window.innerHeight // height of browser window
 
-function parallaxbubbles(){
+function parallaxnav(){
  var scrolltop = window.pageYOffset // get number of pixels document has scrolled vertically
- navy.style.top = scrolltop * 1 + 'px' // move bubble1 at 20% of scroll rate
  image.style.bottom = scrolltop * 3 + 'px' // move bubble2 at 50% of scroll rate
- navy.style.opacity = scrolltop / 384
- // image.style.opacity = scrolltop / 384
+ nav.style.opacity = scrolltop / 600
+ if(scrolltop > 150){
+   title.style.opacity = 0
+ }
+ else{
+  title.style.opacity = 1
+ }
+
 }
 
 window.addEventListener('scroll', function(){ // on page scroll
- requestAnimationFrame(parallaxbubbles) // call parallaxbubbles() on next available screen paint
+ requestAnimationFrame(parallaxnav) // call parallaxbubbles() on next available screen paint
 }, false)
 
 

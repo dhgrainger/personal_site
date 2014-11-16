@@ -1,5 +1,5 @@
 body{
- height: 2000px;
+ height: 1020px;
  background: navy url("../images/Aerial06.jpg")top center no-repeat fixed;
  background-size: cover;
  postion: relative;
@@ -33,26 +33,44 @@ div{
  vertical-align: middle;
  font-size: 80px;
  position: fixed;
- z-index: -1;
-}
-
-
-div#navy{
-  opacity: 0;
 }
 
 div#image{
   bottom: -10;
   left: 0px;
   background-color: white;
+  z-index: 1;
+}
+
+div#content{
+  background-color: gray;
+  position: relative;
 }
 
 div#title{
+  opacity: 1;
   color: white;
 }
 
+ul#nav{
+  font-size: 25;
+  color: blue;
+  list-style: none;
+  position: absolute;
+  bottom: 0;
+  width: 70%;
+  opacity: 0;
+}
+
+li{
+  display: inline;
+  margin: 0% 5%;
+}
 h1{
   position: fixed;
   bottom:50%;
   left: 25%;
+}
+img{
+  width: 30%;
 }
