@@ -1,5 +1,3 @@
-
-// Create cross browser requestAnimationFrame method:
 window.requestAnimationFrame = window.requestAnimationFrame
  || window.mozRequestAnimationFrame
  || window.webkitRequestAnimationFrame
@@ -12,17 +10,11 @@ var nav = document.getElementById('nav')
 var par = document.getElementById('par')
 var pic = document.getElementById('pic')
 
-var scrollheight = document.body.scrollHeight // height of entire document
-var windowheight = window.innerHeight // height of browser window
-
 function parallaxnav(){
- var scrolltop = window.pageYOffset // get number of pixels document has scrolled vertically
- image.style.bottom = scrolltop * 3 + 'px' // move bubble2 at 50% of scroll rate
-
+ var scrolltop = window.pageYOffset
+ image.style.bottom = scrolltop * 3 + 'px'
  nav.style.opacity = scrolltop / 600
  par.style.opacity = 1 - (scrolltop / 100 )
-
-
  if(scrolltop > 150){
    title.style.opacity = 0
  }
@@ -35,8 +27,8 @@ function parallaxnav(){
  pic.style.bottom = (15 - (scrolltop/ 20)) + '%'
 }
 
-window.addEventListener('scroll', function(){ // on page scroll
- requestAnimationFrame(parallaxnav) // call parallaxbubbles() on next available screen paint
+window.addEventListener('scroll', function(){
+ requestAnimationFrame(parallaxnav)
 }, false)
 
 
