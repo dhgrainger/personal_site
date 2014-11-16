@@ -1,7 +1,8 @@
 body{
- height: 1000px;
+ height: 2000px;
  background: navy url("../images/Aerial06.jpg")top center no-repeat fixed;
  background-size: cover;
+ postion: relative;
 }
 /*
 div{
@@ -27,11 +28,10 @@ div#blue{
 */
 div{
  width: 100%;
- height: 30%;
+ height: 50%;
  text-align: center;
- font-size: 80;
- top: 0;
- left: 0;
+ vertical-align: middle;
+ font-size: 80px;
  position: fixed;
  z-index: -1;
 }
@@ -42,6 +42,17 @@ div#navy{
 }
 
 div#image{
-  opacity: 0;
+  bottom: -10;
+  left: 0px;
+  background-color: white;
 }
 
+div#title{
+  color: white;
+}
+
+h1{
+  position: fixed;
+  bottom:50%;
+  left: 25%;
+}
