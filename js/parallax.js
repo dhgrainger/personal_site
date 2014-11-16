@@ -20,7 +20,7 @@ function parallaxnav(){
  image.style.bottom = scrolltop * 3 + 'px' // move bubble2 at 50% of scroll rate
 
  nav.style.opacity = scrolltop / 600
- par.style.opacity = 10 / scrolltop
+ par.style.opacity = 1 - (scrolltop / 100 )
 
 
  if(scrolltop > 150){
