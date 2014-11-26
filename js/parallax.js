@@ -4,38 +4,55 @@
 //  || window.msRequestAnimationFrame
 //  || function(f){setTimeout(f, 1000/60)}
 
-var image = document.getElementById('image')
-var title = document.getElementById('title')
-var nav = document.getElementById('nav')
-var par = document.getElementById('par')
+
 
 function parallaxNav(scrolltop){
- navDiv.style.bottom = scrolltop * 3 + 'px'
- nav.style.opacity = scrolltop / 600
- par.style.opacity = 1 - (scrolltop / 100 )
-
+  if (scrolltop < 221 ){
+    navDiv.style.bottom = scrolltop / 2.6 + '%'
+    nav.style.opacity = scrolltop / 100
+    par.style.opacity = 1 - (scrolltop / 200 )
+    navDiv.style.background = "rgba(255, 255, 255," + (1 - (scrolltop/600)) + ")"
+  }
+  else{
+    navDiv.style.bottom = 85 + '%'
+    navDiv.style.background = "rgba(255, 255, 255, 0.1)"
+  }
 }
 
 function titleStyle(scrolltop){
+  var title = document.getElementById('title')
+  var welcome = document.getElementById('welcome')
+
+  // welcome.innerHTML = (1-scrolltop/200)
+
   if(scrolltop > 150){
     title.style.opacity = 0
   }
   else{
-   title.style.opacity = 1
+    title.style.opacity = 1
   }
 }
+
 function pictureMove(scrolltop){
   var pic = document.getElementById('pic')
-  pic.style.left = (15 - (scrolltop / 20)) + '%'
-  pic.style.height = (66 - (scrolltop/ 5)) + '%'
-  pic.style.bottom = (15 - (scrolltop/ 20)) + '%'
+  if (scrolltop < 221 ){
+    pic.style.left = (15 - (scrolltop / 20)) + '%'
+    pic.style.height = (66 - (scrolltop/ 5)) + '%'
+    pic.style.bottom = (15 - (scrolltop/ 20)) + '%'
+  }
+  else{
+    pic.style.left = 4 + '%'
+    pic.style.height = 22 + '%'
+    pic.style.bottom = 4 + '%'
+  }
 }
+
 
 window.addEventListener('scroll', function(){
   var scrolltop = window.pageYOffset
-  parallaxNav(scrolltop)
-  pictureMove(scrolltop)
-  titleStyle(scrolltop)
+    parallaxNav(scrolltop)
+    pictureMove(scrolltop)
+    titleStyle(scrolltop)
 }, false)
 
 
