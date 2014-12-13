@@ -2,7 +2,6 @@ body{
  height: 300%;
  background: navy url("../images/Aerial06.jpg")top center no-repeat fixed;
  background-size: cover;
- postion: relative;
 }
 
 /*div{
@@ -60,7 +59,7 @@ div#title{
 
 ul#nav{
   font-size: 25;
-  color: white;
+  color: blue;
   list-style: none;
   position: absolute;
   bottom: 4%;
@@ -96,4 +95,10 @@ p{
   bottom: 15%;
   font-size: 15px;
   opacity: 1;
+}
+
+div#video{
+  background-color: navy;
+  bottom: -10;
+  left: 0px;
 }

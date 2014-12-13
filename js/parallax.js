@@ -9,13 +9,11 @@
 function parallaxNav(scrolltop){
   if (scrolltop < 221 ){
     navDiv.style.bottom = scrolltop / 2.6 + '%'
-    nav.style.opacity = scrolltop / 100
+    nav.style.opacity = scrolltop / 400
     par.style.opacity = 1 - (scrolltop / 200 )
-    navDiv.style.background = "rgba(255, 255, 255," + (1 - (scrolltop/600)) + ")"
   }
   else{
     navDiv.style.bottom = 85 + '%'
-    navDiv.style.background = "rgba(255, 255, 255, 0.1)"
   }
 }
 
