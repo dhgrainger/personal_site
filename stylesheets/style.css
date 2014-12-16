@@ -15,21 +15,8 @@ body{
 
 div#navy{
  background-color: navy;
- /* z-index: 3;
- *//* top: 100;
- left: 0;*/
  position: relative;
 }
-
-/*div#image{
-  background-image: url("../images/Aerial06.jpg");
-  top: -100%;
-}
-
-div#blue{
- background-color: blue;
- top: -200;
-}*/
 
 div{
  width: 100%;
@@ -47,14 +34,10 @@ div#navDiv{
   z-index: 1;
 }
 
-div#content{
-  background-color: gray;
-  position: relative;
-}
-
 div#title{
   opacity: 1;
   color: white;
+  text-align: center;
 }
 
 ul#nav{
@@ -76,8 +59,8 @@ li{
 
 h1{
   position: fixed;
-  bottom:50%;
-  left: 25%;
+  bottom: 55%;
+  left: 30%;
 }
 
 img{
@@ -93,12 +76,16 @@ p{
   position: absolute;
   right: 15%;
   bottom: 15%;
-  font-size: 15px;
+  font-size: 20px;
   opacity: 1;
 }
 
 div#video{
-  background-color: navy;
-  bottom: -10;
+  background: rgba(255, 255, 255, 0.5);
+  top: 100%;
   left: 0px;
 }
+
+
+
+
